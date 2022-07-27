@@ -6,6 +6,7 @@ import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import particlesOptions from "./particles.json";
 import MovingComponent from 'react-moving-text';
+import Player from './components/Player';
 
 function App() {
     const particlesInit = useCallback(main => {
@@ -44,6 +45,8 @@ function App() {
                         Uma rádio, diferenciada!
                     </MovingComponent>
                 </div>
+
+                <Player />
             </div>
         </div>
     );

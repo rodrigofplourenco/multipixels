@@ -4,7 +4,7 @@
 }
 
 .multipixels .titles {
-    margin-top: 15rem;
+    margin-top: 17rem;
     margin-left: 20rem;
     max-width: 50%;
     text-transform: uppercase;
@@ -13,11 +13,25 @@
 .titles .title {
     font-size: 6em;
     line-height: 7rem;
+    font-weight: 500;
 }
 
 .titles .subtitle {
     font-size: 3rem;
-    font-weight: 500;
+    font-weight: 300;
     color: rgb(255, 106, 106);
     padding-left: 3rem;
+}
+
+.player {
+    width: 100%;
+    height: 7%;
+    bottom: 0;
+    background-color: #333;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-transform: uppercase;
 }
