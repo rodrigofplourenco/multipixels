@@ -14,7 +14,7 @@ function App() {
     }, [])
 
     return (
-        <div className="App">
+        <div>
             <Particles options={particlesOptions} init={particlesInit}/>
 
             <div>
