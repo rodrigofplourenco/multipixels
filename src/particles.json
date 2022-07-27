@@ -2,12 +2,13 @@
   "autoPlay": true,
   "background": {
     "color": {
-      "value": "#000"
+      "value": "#333",
+      "opacity": 0
     },
-    "image": "",
-    "position": "",
-    "repeat": "",
-    "size": "",
+    "image": "url(./assets/img/banner.jpg)",
+    "position": "bottom",
+    "repeat": "no-repeat",
+    "size": "cover",
     "opacity": 1
   },
   "backgroundMask": {
