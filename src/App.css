@@ -1,0 +1,22 @@
+* {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.multipixels .titles {
+    margin-top: 15em;
+    margin-left: 10em;
+    max-width: 45%;
+}
+
+.titles .title {
+    font-size: 7em;
+    font-weight: bold;
+}
+
+.titles .subtitle {
+    font-size: 3em;
+    font-weight: 500;
+    color: rgb(255, 106, 106);
+    padding-left: 1.5em;
+}
