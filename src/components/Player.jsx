@@ -25,7 +25,7 @@ const Player = () => {
   }
 
   return (
-    <div className='w-full fixed bottom-0 py-3 bg-gray-700 text-white uppercase flex lg:flex-row md:flex-row flex-col items-center justify-center'>
+    <div className='w-full fixed bottom-0 py-6 bg-transparent text-white uppercase flex lg:flex-row md:flex-row flex-col items-center justify-center'>
       <ReactPlayer 
         url={activeStream.url}
         playing={playing} 
@@ -77,12 +77,12 @@ const Player = () => {
         streams.map(stream => 
           stream !== activeStream &&
             <div 
-              className='flex justify-center items-center p-2 cursor-pointer' 
+              className='flex justify-center items-center p-2 hover:text-red-500 transition-colors cursor-pointer' 
               onClick={() => changeStream(stream)}
               key={stream.title}
             >
               <img 
-                className='w-6 h-6 rounded-full lg:ml-6 lg:mt-0 md:mt-0 mt-3 cursor-pointer'
+                className='w-6 h-6 rounded-full lg:ml-6 lg:mt-0 md:mt-0 mt-3 rounded cursor-pointer'
                 src={stream.thumbnail} 
                 alt={stream.title} 
               />
