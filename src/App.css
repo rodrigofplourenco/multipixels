@@ -6,12 +6,12 @@
 .multipixels .titles {
     margin-top: 15rem;
     margin-left: 20rem;
-    max-width: 40%;
+    max-width: 50%;
     text-transform: uppercase;
 }
 
 .titles .title {
-    font-size: 7em;
+    font-size: 6em;
     line-height: 8rem;
 }
 
