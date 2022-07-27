@@ -3,29 +3,31 @@ import React, { createRef, useState } from 'react'
 import ReactPlayer from 'react-player'
 import { FaPlay, FaPause } from 'react-icons/fa';
 
+import streams from '../config/streams';
+
 const Player = () => {
   const audioPlayer = createRef();
 
-  const [url, setUrl] = useState('https://apolo.souzahost.com/8042/stream');
+  const [activeStream, setActiveStream] = useState(streams[0]);
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(0.5);
 
   function play() {
-    const audioPlayerNode = audioPlayer.current;
-
     setPlaying(true);
   }
 
   function pause() {
-    const audioPlayerNode = audioPlayer.current;
-
     setPlaying(false);
   }
 
+  function changeStream(stream) {
+    setActiveStream(stream);
+  }
+
   return (
-    <div className='w-full fixed bottom-0 h-14 bg-gray-700 text-white uppercase flex items-center justify-center'>
+    <div className='w-full fixed bottom-0 py-3 bg-gray-700 text-white uppercase flex lg:flex-row md:flex-row flex-col items-center justify-center'>
       <ReactPlayer 
-        url={url}
+        url={activeStream.url}
         playing={playing} 
         volume={volume}
         width={0}
@@ -58,8 +60,37 @@ const Player = () => {
         step="any" 
         value={volume} 
         onChange={(e) => setVolume(e.target.value)}
-        className="mx-6"
+        className="lg:mx-12 md:mx-6 lg:my-0 my-6"
       />
+
+      <div className='flex justify-center items-center border border-white p-2 rounded cursor-pointer'>
+        <img 
+          className='w-6 h-6 rounded-full'
+          src={activeStream.thumbnail} 
+          alt={activeStream.title}
+        />
+
+        <p className='pl-3'>{activeStream.title}</p>
+      </div>
+
+      {
+        streams.map(stream => 
+          stream !== activeStream &&
+            <div 
+              className='flex justify-center items-center p-2 cursor-pointer' 
+              onClick={() => changeStream(stream)}
+              key={stream.title}
+            >
+              <img 
+                className='w-6 h-6 rounded-full lg:ml-6 lg:mt-0 md:mt-0 mt-3 cursor-pointer'
+                src={stream.thumbnail} 
+                alt={stream.title} 
+              />
+
+              <p className='pl-3'>{stream.title}</p>
+            </div>
+        )
+      }
     </div>
   )
 }
