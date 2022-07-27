@@ -7,8 +7,7 @@ const Player = () => {
   const audioPlayer = createRef();
 
   const [playing, setPlaying] = useState(false);
-
-  console.log(playing)
+  const [volume, setVolume] = useState(0.5);
 
   function play() {
     const audioPlayerNode = audioPlayer.current;
@@ -27,6 +26,7 @@ const Player = () => {
       <ReactPlayer 
         url='https://apolo.souzahost.com/8042/stream' 
         playing={playing} 
+        volume={volume}
         width={0}
         height={0}
         ref={audioPlayer}
@@ -49,6 +49,16 @@ const Player = () => {
             onClick={pause}
           />
       }
+
+      <input 
+        type="range" 
+        min="0" 
+        max="1" 
+        step="any" 
+        value={volume} 
+        onChange={(e) => setVolume(e.target.value)}
+        className="mx-6"
+      />
     </div>
   )
 }
