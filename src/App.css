@@ -11,16 +11,17 @@
 }
 
 .titles .title {
-    font-size: 6em;
-    line-height: 7rem;
-    font-weight: 500;
+    font-size: 110px;
+    line-height: 121px;
+    font-weight: 400;
 }
 
 .titles .subtitle {
-    font-size: 3rem;
-    font-weight: 300;
+    font-size: 40px;
+    font-weight: 400;
     color: rgb(255, 106, 106);
     padding-left: 3rem;
+    line-height: 44px;
 }
 
 .player {
