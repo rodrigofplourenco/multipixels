@@ -2,10 +2,9 @@
   "autoPlay": true,
   "background": {
     "color": {
-      "value": "#333",
-      "opacity": 0
+      "value": "#000"
     },
-    "image": "url(./assets/img/banner.jpg)",
+    "image": "url(/img/banner.jpg)",
     "position": "bottom",
     "repeat": "no-repeat",
     "size": "cover",

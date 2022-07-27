@@ -7,7 +7,7 @@ import Player from './components/Player';
 
 function App() {
     return (
-        <div className="main">
+        <div>
             <Particles />
 
             <Credits />
