@@ -6,6 +6,7 @@ import { FaPlay, FaPause } from 'react-icons/fa';
 const Player = () => {
   const audioPlayer = createRef();
 
+  const [url, setUrl] = useState('https://apolo.souzahost.com/8042/stream');
   const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(0.5);
 
@@ -24,7 +25,7 @@ const Player = () => {
   return (
     <div className='w-full fixed bottom-0 h-14 bg-gray-700 text-white uppercase flex items-center justify-center'>
       <ReactPlayer 
-        url='https://apolo.souzahost.com/8042/stream' 
+        url={url}
         playing={playing} 
         volume={volume}
         width={0}

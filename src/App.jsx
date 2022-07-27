@@ -1,8 +1,7 @@
 import React from 'react';
 
 import Particles from './components/Particles';
-import Titles from './components/Titles';
-import GoDownButton from './components/GoDownButton';
+import Hero from './components/Hero';
 import Player from './components/Player';
 
 function App() {
@@ -11,12 +10,10 @@ function App() {
             <Particles />
 
             <div>
-                <Titles />
-
-                <GoDownButton />
-
-                <Player />
+                <Hero />
             </div>
+
+            <Player />
         </div>
     );
 }
