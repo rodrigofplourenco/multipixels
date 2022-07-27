@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Particles from './components/Particles';
+import Credits from './components/Credits';
 import Hero from './components/Hero';
 import Player from './components/Player';
 
@@ -8,6 +9,8 @@ function App() {
     return (
         <div>
             <Particles />
+
+            <Credits />
 
             <div>
                 <Hero />

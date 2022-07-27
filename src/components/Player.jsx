@@ -39,7 +39,7 @@ const Player = () => {
         !playing &&
           <FaPlay 
             size={24} 
-            className='cursor-pointer'
+            className='cursor-pointer hover:text-red-500 transition-colors'
             onClick={play}
           />
       }
@@ -48,7 +48,7 @@ const Player = () => {
         playing &&
           <FaPause 
             size={24} 
-            className='cursor-pointer'
+            className='cursor-pointer hover:text-red-500 transition-colors'
             onClick={pause}
           />
       }
