@@ -19,25 +19,25 @@ function App() {
             <div className='multipixels'>
                 <div className='titles'>
                     <MovingComponent
-                        type="flash"
-                        duration="2000ms"
-                        delay="0.3s"
+                        type="fadeInFromTop"
+                        duration="1000ms"
+                        delay="0s"
                         direction="normal"
                         timing="ease"
-                        iteration="infinite"
+                        iteration="1"
                         fillMode="both"
                         className="title"
                     >
                         Bem-vindo(a) à multipixels.
-                    </MovingComponent>
+                    </MovingComponent> 
 
                     <MovingComponent
-                        type="pulse"
+                        type="fadeInFromLeft"
                         duration="1000ms"
-                        delay="0.3s"
+                        delay="0s"
                         direction="normal"
                         timing="ease"
-                        iteration="infinite"
+                        iteration="1"
                         fillMode="forwards"
                         className='subtitle'
                     >
